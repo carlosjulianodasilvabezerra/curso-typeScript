@@ -136,3 +136,23 @@ console.log(`Minha nota é ${nota}`);
 
 nota = '10';
 console.log(`Minha nota é ${nota}`);
+
+// Never
+function falha(msg: string): never {
+  throw new Error(msg);
+}
+
+const produto = {
+  nome: 'Lapis',
+  preco: 1,
+  validarProduto() {
+    if(!this.nome || this.nome.trim().length == 0) {
+      falha('Precisa ter um nome');
+    } 
+    if(this.preco <= 0) {
+      falha('Preco inválido!');
+    }
+  }
+}
+
+produto.validarProduto();
