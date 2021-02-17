@@ -96,11 +96,14 @@ usuario = {
  *   -> Fora do horário (>8)
  */
 
-let funcionario: {
+// alias
+type Funcionario = {
   supervisores: string[],
   baterPonto: (horas: number) => string
-} = {
-  supervisores: ['Bia', 'Carlos'],
+}
+
+const funcionario: Funcionario = {
+  supervisores:  ['Bia', 'Carlos'],
   baterPonto(horario: number): string {
     if(horario <= 8) {
       return 'Ponto normal'
@@ -126,3 +129,10 @@ let funcionario2: {
 
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(9));
+
+// Union Types
+let nota: number | string= 10;
+console.log(`Minha nota é ${nota}`);
+
+nota = '10';
+console.log(`Minha nota é ${nota}`);
