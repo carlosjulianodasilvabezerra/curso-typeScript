@@ -35,3 +35,55 @@ var Cor;
 })(Cor || (Cor = {}));
 var minhaCor = Cor.Azul;
 console.log(minhaCor);
+// any
+var carro = 'BMW';
+console.log(carro);
+carro = { marca: 'BMW', ano: 2019 };
+console.log(carro);
+// funcao
+function returnName() {
+    return nome;
+}
+console.log(returnName());
+function digaOi() {
+    console.log('oi');
+}
+digaOi();
+function multiplicar(numA, numB) {
+    return numA * numB;
+}
+multiplicar(2, 2);
+// tipo funcao
+var calculo;
+// calculo = digaOi;
+// calculo();
+calculo = multiplicar;
+console.log(calculo(5, 5));
+// objetos
+var usuario = {
+    nome: 'João',
+    idade: 27
+};
+usuario = {
+    idade: 31,
+    nome: 'Maria'
+};
+// Desafio
+/**
+ * Criar um objeto funcionário com:
+ * - Array de strings com os nomes dos supervisores
+ * - Funcao de bater ponto que recebe a hora e retorna uma string
+ *   -> Ponto normal (<=8)
+ *   -> Fora do horário (>8)
+ */
+var funcionario = {
+    supervisores: ['Ana', 'Maria'],
+    baterPonto: function (horario) {
+        if (horario <= 8) {
+            return 'Ponto normal';
+        }
+        else {
+            return 'Fora do horário';
+        }
+    }
+};
